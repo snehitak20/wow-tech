@@ -7,12 +7,12 @@ const userdata =
     "password": "password"
   },
   {
-    "username": "Ali",
-    "password": "baba"
+    "username": "Sunny",
+    "password": "password"
   },
   {
     "username": "Lucky",
-    "password": "sunny"
+    "password": "password"
   }
 ];
 
