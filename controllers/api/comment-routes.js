@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment } = require('../../models');
+const { Comment, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // GET route
@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req, res) => {
         const comments = commentData.map((comment) => comment.get({ plain: true }));
         console.log(comments);
 
-        res.render('singlepost', {comments, loggedIn: req.session.loggedIn});
+        res.render('single-post', {comments, loggedIn: req.session.loggedIn});
     } catch (err) {
         res.status(500).json(err);
     }

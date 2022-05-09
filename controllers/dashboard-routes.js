@@ -16,7 +16,7 @@ router.get('/', withAuth, async (req, res) => {
 
         console.log(posts);
 
-        res.render('allposts', {
+        res.render('all-posts', {
             layout: 'dashboard', 
             posts,
         });
@@ -27,7 +27,7 @@ router.get('/', withAuth, async (req, res) => {
 
 // After clicking the 'NEW POST' button 
 router.get('/new', withAuth, (req, res) => {
-    res.render('newpost', {
+    res.render('new-post', {
         layout: 'dashboard', 
     });
 });
