@@ -3,7 +3,7 @@ const { User } = require('../../models');
 
 // To SIGN UP
 router.post('/', async (req, res) => {
-    try{
+    try {
         const newUser = await User.create({
             username: req.body.username,
             password: req.body.password
@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
 
 // To LOGIN 
 router.post('/login', async (req, res) => {
-    try{
+    try {
         const user = await User.findOne({
             where: {
                 username: req.body.username,

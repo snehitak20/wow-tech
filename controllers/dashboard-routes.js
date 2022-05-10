@@ -7,9 +7,7 @@ router.get('/', withAuth, async (req, res) => {
     try {
         // Here use the findAll method for the posts--> will store the results of db query within postData
         const postData = await Post.findAll({
-            where: {
-                "userId": req.session.userId
-            },
+            where: {"userId": req.session.userId},
             include: [User]
         });
         const posts = postData.map((post) => post.get({ plain: true }));
